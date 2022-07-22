@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet');
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 8.3rem;
+    background-color: #F5F5F5;
+  }
+  
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.profile-grid {
+    border-top: 10px solid #333;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-row-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    border-bottom: 10px solid #333;
+}
+
+
+.container1,
+.container2,
+.container3 {
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0px 15px 10px -15px #111;
+}
+.container1 {
+    margin-top: 2rem;
+    padding: 2rem 0;
+    text-align: center;
+    
+}
+
+#prof-pic {
+    outline: 4px solid #333;
+    padding: 0.2rem;
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+}
+
+.pic-text {
+    margin: 0.5rem 0;
+}
+
+.container2 {
+    display: grid;
+    grid-row-gap: 1rem;
+    grid-column-gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas: 
+      "top top"
+      "middle middle"
+      "bottom-left bottom-right"
+      "bottom bottom"
+      ;
+    padding: 1rem 2rem;
+}
+
+.h2-container {
+    padding: 0.2rem;
+    margin: 1rem 0;
+    grid-area: top;
+    justify-self: left;
+    border-bottom: 5px solid #333;
+}
+  
+.h2-container2 {
+    padding: 0.2rem rem;
+    margin: 1rem 0;
+    justify-self: center;
+    border-bottom: 5px solid #333;
+}
+
+.middle-container {
+    grid-area: middle;
+    padding: 1rem 2.5rem;
+}
+
+.bottom-container1 {
+    grid-area: bottom-left;
+}
+  
+.bottom-container2 {
+    grid-area: bottom-right;
+}
+
+.container3 {
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+}
+
+.icons-container {
+    justify-self: center;
+}
+.icons-container a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+
+@media (max-width:1000px) {
+    .bottom-container2 {
+        grid-area: bottom;
+    }
+
+    .container1,
+    .container2,
+    .container3 {
+    padding: 0.5rem;
+    width: 98%;
+}
+}
+
+@media (max-width: 520px) {
+    .bottom-container2 {
+        grid-area: bottom;
+    }
+    .middle-container {
+        padding:0.5rem;
+    }
+}

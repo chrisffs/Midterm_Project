@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* #main-div {
+  
+} */
+
+.nav-bar-div {
+  width: 100%;
+}
+
+.main-nav {
+    position: fixed; 
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.logo-div {
+    margin: 1rem;
+}
+  
+.main-nav, .main-nav ul {
+  background-color: white;
+  opacity: 0.95;
+}
+.main-nav ul {
+    /* background-color: rgb(234, 233, 233); */
+    position: absolute;
+  /*   text-align: left; */
+    left: 0;
+    list-style: none;
+    width: 100%; 
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: 0.3s;
+    border-bottom: 3px solid rgb(37, 37, 37);
+}
+
+.main-nav li {
+    text-align: center;
+    margin: 0.3rem auto;
+    padding: 1rem;
+    max-width: 95%;
+}
+
+.main-nav li:hover {
+    box-shadow: 0 -5px 0px #333 inset;
+    background-color: rgb(204, 204, 204);
+    transition: 0.3s;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: black;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+} 
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle:checked ~ ul {
+    transform: scale(1,1);
+}
+  
+.nav-toggle:checked ~ ul a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+  
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+  
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: black;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+  
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+  
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+  
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+#main-doc {
+    margin: 4rem 0 0 0;
+    display: grid;
+    grid-template-columns: 0.5fr auto 0.5fr;
+}
+
+.content-container {
+  margin: 2rem 1rem 0 1rem ;
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.image-container {
+  max-width: 43rem;
+}
+
+#kobe-image {
+    width: 100%;
+}
+
+.text-container{ 
+  text-align: center;
+  max-width: 20rem;
+}
+
+.text-container h1{
+  /* font-size: 250%; */
+  font-family: 'Bebas Neue', cursive;
+}
+
+.text-container p {
+  margin-top: 2rem;
+}
+
+#active {
+  box-shadow: 0 -5px 0px #333 inset;
+	/* text-decoration: underline !important; */
+}
+
+#footer {
+  position: relative;
+  width: 100%;
+  background-color: #333;
+  bottom: 0;
+  left: 0;
+}
+
+.container3 {
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  
+}
+
+.icons-container,.h2-container2{
+  justify-self: center;
+}
+.icons-container a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 2rem;
+  
+}
+.h2-container2 h3, .icons-container a {
+  color: rgb(219, 219, 219);
+}
+
+@media (max-width: 1150px) {
+  .container3 { 
+    margin-top: 6rem;
+  }
+}
+@media (min-width: 1150px) {
+  .content-container {
+    flex-direction: row;
+    gap: 4.7rem;
+  }
+}
+@media (min-width: 768px) {
+    .nav-toggle-label {
+      display: none;
+    }
+    .main-nav {
+      display: grid;
+      grid-template-columns: 0.5fr auto minmax(600px, 3.5fr) 0.5fr;
+    }
+    
+    .logo-div {
+      grid-column: 2/3;
+    }
+    .main-nav ul {
+      all: unset;
+      grid-column: 3/4; 
+      list-style: none;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    .main-nav ul li{
+      margin: 0.3rem 1rem;
+    }
+    
+    .main-nav ul a{
+      opacity: 1;
+    }
+
+    
+
+    .text-container{ 
+      text-align: center;
+    }
+    .text-container h1{
+      font-size: 400%;
+    }
+
+    .text-container p {
+      font-size: 115%;
+    }
+  }
+
